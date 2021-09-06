@@ -1,0 +1,7 @@
+forms:
+  admission: 
+    required_slots:
+      formation_type: 
+        -type: from_text
+      cursus:
+        -type: from_text

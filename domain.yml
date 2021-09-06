@@ -1,0 +1,163 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_lab
+  - ask_prof
+  - ask_eng
+  - inform
+  - contacts
+  - institut_adrs
+  - mosque
+  - restaurent
+  - cafeteria
+  - housing
+  - library
+  - deen
+  - ask_mood
+  - why_insea
+  - job_rate
+  - fees
+  - academic_year
+  - ask_news
+  - ask_events
+  - ask_phd
+  - ask_master
+  - ask_weather
+  - ask_admission
+  - thanks
+  - mood_angry
+
+entities: 
+  - lab_name
+  - dprt_name
+  - field_name
+
+forms:
+  admission_form: 
+    required_slots:
+      formation_type: 
+      - type: from_text
+      cursus:
+      - type: from_text
+
+slots: 
+  lab_name:
+    type: text
+  dprt_name:
+    type: text
+  field_name:
+    type: text
+  formation_type: 
+    type: text
+  cursus: 
+    type: text
+
+responses:
+  utter_greet:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Salut, comment ça va ?</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_mood:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Je vais bien merci, et prêt à répondre à vos questions ...</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_goodbye:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Bye Bye!</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_iamabot:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Je suis un bot, et je suis pret pour vos questions.</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_submit:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Ok, Merci</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_cycle_cpge:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L'accès au cycle d'ingénieur à l'insea à partir des classes prépartoires se fait selon le classement de chaque candidat voici un tableau qui résume ce processus :</p><table class='table table-striped ' style='max-width: 29rem;'><thead><tr><th scope='col' style='width: 45%;'>Filière</th><th scope='col'>Min</th><th scope='col'>Max</th></tr></thead><tbody><tr><th scope='row'>Data Science</th><td>Mp (xxx) PSI (xxx)</td><td>Mp (xxx) PSI (xxx)</td></tr><tr><th scope='row'>Data Engineer</th><td>Mp (xxx) PSI (xxx)</td><td>Mp (xxx) PSI (xxx)</td></tr><tr><th scope='row'>Statistique Démographie</th><td>Mp (xxx) PSI (xxx)</td><td>Mp (xxx) PSI (xxx)</td></tr><tr><th scope='row'>Statistique Economie</th><td>Mp (xxx) PSI (xxx)</td><td>Mp (xxx) PSI (xxx)</td></tr><tr><th scope='row'>Recherche opérationnelle</th><td>Mp (xxx) PSI (xxx)</td><td>Mp (xxx) PSI (xxx)</td></tr><tr><th scope='row'>Actuariat et Finance</th><td>Mp (xxx) PSI (xxx)</td><td>Mp (xxx) PSI (xxx)</td></tr></tbody></table><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_cycle_other: 
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L'accès au cycle d'ingénieur à l'insea est également possible Aux candidats ayant réussi le concours d’accès ouvert aux étudiants du bac+2 (DEUG, DUT, DEUST, DEUP ou tout autre diplôme reconnu équivalent) ou les titulaires du bac+3 d'étude selon les pré-requis pédagogiques et les modalités précisés dans le descriptif de la filière demandée et dans la limite des places disponibles. </p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_master_other:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Candidater un master à l'insea est uniquement possible pour Licence SMI (Sciences Mathématiques et Informatique) Licence SMA (Sciences Mathématiques et Applications) ou diplôme d’Informatique équivalent</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_master_licence:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Si vous disposez d'une Licence SMI (Sciences Mathématiques et Informatique) Licence SMA (Sciences Mathématiques et Applications) ou diplôme d’Informatique équivalent vous etes autorisé de poster aux masters à l'insea </p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_ask_lab_name:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Quel est le nom du laboratoire que vous souhaitez connaître ?</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div> "
+
+  utter_ask_departement_name:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Quel est le nom du département que vous souhaitez connaître ?</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_ask_eng_field:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Quel filière vous souhaitez connaître ?</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_contacts:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Voici les coordonnées pour contacter l'INSEA </p><div class='card' style='width: 18rem;'><ul class='list-group list-group-flush'><li class='list-group-item fa fa-phone'> (+212) 05 37 77 48 59/60</li><li class='list-group-item fa fa-fax'> (+212) 05 37 77 94 57</li><li class='list-group-item fa fa-envelope'> contact@insea.ac.ma</li><li class='list-group-item fa fa-at'><a target='_blank' href = 'http://www.insea.ac.ma' > http://www.insea.ac.ma</a></li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div> "
+
+  utter_institut_adrs:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L'INSEA est à Rabat, voici l'adresse exacte :</p><div class='card text-center' style='width: 18rem;'><div class='card-body'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.4182688168385!2d-6.865152084880109!3d33.98178872888712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76cc2305fe733%3A0x877696d1bf2ecee6!2sInstitut%20national%20de%20statistique%20et%20d&#39;%C3%A9conomie%20appliqu%C3%A9e!5e0!3m2!1sfr!2sma!4v1630255052188!5m2!1sfr!2sma' width='200' height='200' style='border:0;' allowfullscreen='' loading='lazy'></iframe><p> Institut National de Statistique et d'Economie Appliquée <br /><strong>B.P.:6217 Rabat-Instituts</strong></p><a target='_blank' href='https://goo.gl/maps/7LEmMQ7TNhkevb1B9' class='btn btn-primary'>Ouvrir sur Maps</a></div></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+  
+  utter_mosque:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Oui vous pouvez faire la prière à l'INSEA. L'institut dispose d'un mosqué spacieux didié à la prière. </p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_restaurent:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L'INSEA est dotée depuis octobre 1994, d’un restaurant avec une capacité d’accueil de près de 600 places destinées aux étudiants de ces deux établissements. Il sert en moyenne 1.200 repas par jour comprenant le petit déjeuner, le déjeuner et le dîner. Le prix de chaque repas est de <strong>1.20 DH</strong></p><div class='card text-center' style='width: 18rem;' style = 'font-family: Alegreya Sans Light, sans-serif;'><ul class='list-group list-group-flush'><li class='list-group-item'> <strong>Horaires</strong></li><li class='list-group-item'> <strong>7h-8:30h</strong> pour le petit déjeuner </li><li class='list-group-item'> <strong>12h-1:30h</strong> pour le déjeuner</li><li class='list-group-item'> <strong>8h-9:30h</strong> pour le dinner</li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_cafeteria:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Un petit creux ? Les cafétérias gérées par les associations étudiantes sont ouvertes à toute heure de la journée ! il existe des boissons chauds et foids, repas, snacks...</p><div class='card text-center' style='width: 18rem;' style = 'font-family: Alegreya Sans Light, sans-serif;'><ul class='list-group list-group-flush'><li class='list-group-item'> Horaires :<strong> de 7h-23:30h</strong></li><li class='list-group-item'> Fourchette de prix :<strong> de 0DH - 30DH</strong></li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_housing:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L’Institut dispose d’un internat réputé parmi les meilleurs qui existent à Rabat. Il comprend actuellement près de 500 chambres individuelles destinées à l’hébergement de ses étudiants.</p><div class='card text-center' style='width: 18rem;' style = 'font-family: Alegreya Sans Light, sans-serif;'><ul class='list-group list-group-flush'><li class='list-group-item'> Horaires :<strong> de 24h/24h</strong></li><li class='list-group-item'> Frais :<strong> Gratuite (offerte par l'Etat)</strong></li><li class='list-group-item'> Contacter le service : contact</li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_library:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>La bibliothèque de l’INSEA est en accès libre depuis 2013 afin de permettre aux usagers de parcourir ses documents sur les rayonnages et pouvoir travailler dans un local calme et dynamique.</p><div class='card text-center' style='width: 18rem;' style = 'font-family: Alegreya Sans Light, sans-serif;'><ul class='list-group list-group-flush'><li class='list-group-item'> Horaires :<strong> de 8h-16h(pour CID) et 24h/24h (salle d'études)</strong></li><li class='list-group-item'> Locaux et arrangement :<strong> Salle de collection, salle de lecture, salle d'archives</strong></li><li class='list-group-item'> Possible de faire un pret jusqu'a 4 documents</li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_deen:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Le Directeur de l'INSEA est Mr. Ahmed Skalli depuis 2018.</p><div class='card text-center' style='width: 18rem;' style = 'font-family: Alegreya Sans Light, sans-serif;'><ul class='list-group list-group-flush'><li class='list-group-item'> Contact :<strong> <a href = 'mailto: skalli@insea.ac.ma'>skalli@insea.ac.ma</a></strong></li><li class='list-group-item'> Tél :<strong> 06 61 30 79 76 / 06 63 68 77 64</strong></li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_fees:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Les frais d'insription est de 730DH chaque année compris la restauration, le dortoire et les assurances.</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_job_rate:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Le taux de travail grace au diplome de l'INSEA est de 70% à partir des statistiques éffectuées l'année dernière (2020). Les différents domaines sont : La bourse, data analyste, data scientist, Ingénieurs d’Application de la Statistique</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_why_insea:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L'INSEA est connue pour sa sélectivité et le haut niveau de ses formation en Data Science. L'Insertion professionnelle : grâce à la qualité de ses formations, les diplômés ont un taux d'emploi à presque 100%.</p><div class='card text-center' style='width: 18rem;' style = 'font-family: Alegreya Sans Light, sans-serif;'><ul class='list-group list-group-flush'><li class='list-group-item'> <strong>Première institut de statistiques au Maroc.</strong></li><li class='list-group-item'> <strong>Accès direct au marché de travail</strong></li><li class='list-group-item'><strong>Classé parmi les meilleurs écoles d'ingénieurs au Maroc</li></ul></div><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_academic_year:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>L'année universitaire commence le 10/09/2021 et termine le 30/07/2022.</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_ask_cursus:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Quel est votre cursus ('cpge', 'licence', 'dut', 'deust'...) ?</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_ask_formation_type:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Quel type de formation souhaitez vous faire, ('cycle', 'master') ?</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_thanks:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>De rien, je suis disponible toujours pour répondre à vos question ...</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+  utter_angry_mood:
+  - text: "<div class='d-flex flex-row p-3'><div class='w-100'><div class='d-flex justify-content-between align-items-center'><div class='d-flex flex-row align-items-center'></div></div><p class='bot_corps' ondblclick='myFunction(1)'>Je vais pas répondre ...</p><div class = 'is_useful' ><div class = 'is_useful_message' id = 'robot_answer_2'>Si la réponse n'est pas exacte, veuillez double-cliquer pour signaler</div><span class = 'clicked' style = 'display:none;'>Merci</span></div></div></div>"
+
+
+actions:
+  - query_labs
+  - ask_lab_name
+  - ask_dprt_name
+  - query_profs
+  - ask_field_name
+  - query_news
+  - query_events
+  - query_phd
+  - query_master
+  - query_eng
+  - weather_request
+  - validate_admission_form
+  - admission_answer
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

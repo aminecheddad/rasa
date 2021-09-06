@@ -1,0 +1,269 @@
+version: "2.0"
+
+stories:
+
+- story: opening
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_mood
+    - action: utter_mood
+
+- story: contacts
+  steps:
+  - intent: contacts
+  - action: utter_contacts
+
+- story: institut_adrs
+  steps:
+  - intent: institut_adrs
+  - action: utter_institut_adrs
+
+- story: mosque
+  steps:
+  - intent: mosque
+  - action: utter_mosque
+
+- story: restaurent
+  steps:
+  - intent: restaurent
+  - action: utter_restaurent
+
+- story: restaurent
+  steps:
+  - intent: restaurent
+  - action: utter_restaurent
+
+- story: restaurent
+  steps:
+  - intent: restaurent
+  - action: utter_restaurent
+
+- story: cafeteria
+  steps:
+  - intent: cafeteria
+  - action: utter_cafeteria
+
+- story: housing
+  steps:
+  - intent: housing
+  - action: utter_housing
+
+- story: library
+  steps:
+  - intent: library
+  - action: utter_library
+
+- story: deen
+  steps:
+  - intent: deen
+  - action: utter_deen
+
+- story: fees
+  steps:
+  - intent: fees
+  - action: utter_fees
+
+- story: why_insea
+  steps:
+  - intent: why_insea
+  - action: utter_why_insea
+
+- story: mood angry
+  steps:
+  - intent: mood_angry
+  - action: utter_angry_mood
+
+- story: thank you
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: academic_year
+  steps:
+  - intent: academic_year
+  - action: utter_academic_year
+
+- story: job_rate
+  steps:
+  - intent: job_rate
+  - action: utter_job_rate
+
+
+- story: asking for labs (query)
+  steps: 
+  - intent: ask_lab
+  - action: ask_lab_name
+
+- story: asking for profs (query)
+  steps: 
+  - intent: ask_prof
+  - action: ask_dprt_name
+
+- story: asking for weather 
+  steps:
+    - intent: ask_weather
+    - action: weather_request
+
+- story: asking for profs (query)
+  steps: 
+  - intent: ask_eng
+  - action: ask_field_name
+
+- story: asking for events (query)
+  steps: 
+  - intent: ask_events
+  - action: query_events
+
+- story: asking for news (query)
+  steps: 
+  - intent: ask_news
+  - action: query_news
+
+- story: asking for master (query)
+  steps: 
+  - intent: ask_master
+  - action: query_master
+
+- story: asking for phd (query)
+  steps: 
+  - intent: ask_phd
+  - action: query_phd
+  
+- story: si2m path
+  steps: 
+  - intent: inform
+    entities:
+      - lab_name: "si2m"
+  - slot_was_set: 
+    - lab_name: "si2m"
+  - action: query_labs
+
+- story: masafeq path
+  steps: 
+  - intent: inform
+    entities:
+      - lab_name: "masafeq"
+  - slot_was_set: 
+    - lab_name: "masafeq"
+  - action: query_labs
+
+- story: informatique path
+  steps: 
+  - intent: inform
+    entities:
+      - dprt_name: "informatique"
+  - slot_was_set: 
+    - dprt_name: "informatique"
+  - action: query_profs
+
+- story: economie et finance path
+  steps: 
+  - intent: inform
+    entities:
+      - dprt_name: "economie et finance"
+  - slot_was_set: 
+    - dprt_name: "economie et finance"
+  - action: query_profs
+
+- story: sciences sociales et techniques d'expression et de communication path
+  steps: 
+  - intent: inform
+    entities:
+      - dprt_name: "sciences sociales et techniques d'expression et de communication"
+  - slot_was_set: 
+    - dprt_name: "sciences sociales et techniques d'expression et de communication"
+  - action: query_profs
+
+- story: mathématique et recherche opérationnelle path
+  steps: 
+  - intent: inform
+    entities:
+      - dprt_name: "mathématique et recherche opérationnelle"
+  - slot_was_set: 
+    - dprt_name: "mathématique et recherche opérationnelle"
+  - action: query_profs
+
+- story: statistique démographie et actuariat path
+  steps: 
+  - intent: inform
+    entities:
+      - dprt_name: "statistique démographie et actuariat"
+  - slot_was_set: 
+    - dprt_name: "statistique démographie et actuariat"
+  - action: query_profs
+
+- story: data science (query)
+  steps: 
+  - intent: inform
+    entities:
+      - field_name: "data science"
+  - slot_was_set: 
+    - field_name: "data science"
+  - action: query_eng
+
+- story: data engineer (query)
+  steps: 
+  - intent: inform
+    entities:
+      - field_name: "data engineer"
+  - slot_was_set: 
+    - field_name: "data engineer"
+  - action: query_eng
+
+- story: actuariat finance (query)
+  steps: 
+  - intent: inform
+    entities:
+      - field_name: "actuariat finance"
+  - slot_was_set: 
+    - field_name: "actuariat finance"
+  - action: query_eng
+
+- story: statistique économie (query)
+  steps: 
+  - intent: inform
+    entities:
+      - field_name: "statistique économie"
+  - slot_was_set: 
+    - field_name: "statistique économie"
+  - action: query_eng
+
+- story: statistique démographie (query)
+  steps: 
+  - intent: inform
+    entities:
+      - field_name: "statistique démographie"
+  - slot_was_set: 
+    - field_name: "statistique démographie"
+  - action: query_eng
+
+- story: recherche opérationnelle (query)
+  steps: 
+  - intent: inform
+    entities:
+      - field_name: "recherche opérationnelle"
+  - slot_was_set: 
+    - field_name: "recherche opérationnelle"
+  - action: query_eng
+
+- story: admission story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_admission
+  - action: admission_form
+  - active_loop: admission_form
+  - slot_was_set:
+    - requested_slot: formation_type
+  - slot_was_set:
+    - formation_type: cycle
+  - slot_was_set:
+    - requested_slot: cursus
+  - slot_was_set:
+    - cursus: cpge
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: admission_answer
+

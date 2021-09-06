@@ -1,0 +1,623 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hey
+    - Bonjour
+    - Bonjour
+    - bonne soirée
+    - moin
+    - salut
+    - allons-y
+    - salut mec
+    - bonne après-midi 
+
+- intent: goodbye
+  examples: |
+    - cu 
+    - à plus tard 
+    - bonne nuit 
+    - bonne journée 
+    - à bientôt 
+    - au revoir 
+    - à plus tard 
+    - bye
+    - bye 
+    - caio
+
+- intent: affirm
+  examples: |
+    - oui
+    - En effet
+    - bien sûr
+    - Ça a l'air bien
+    - correct 
+
+- intent: deny
+  examples: |
+    - non
+    - nn
+    - jamais
+    - je ne pense pas
+    - n'aime pas ça
+    - certainement pas
+    - pas vraiment 
+
+- intent: inform
+  examples: |
+    - C'est quoi [si2m]{"entity": "lab_name"} lab 
+    - [si2m]{"entity": "lab_name"} laboratoire de l'informatique
+    - je veux avoir des informations sur le llaboratoire [si2m]{"entity": "lab_name"}
+    - est ce que [si2m]{"entity": "lab_name"} est laboratoire d'informatique 
+    - quels sont les types de recherches à [si2m]{"entity": "lab_name"}
+    - je veux contacter le reponsable de [si2m]{"entity": "lab_name"}
+    - le responsable de [si2m]{"entity": "lab_name"}
+    - quel est l'email du reponsable du laboratoire [si2m]{"entity": "lab_name"}
+    - C'est quoi [masafeq]{"entity": "lab_name"}  
+    - [masafeq]{"entity": "lab_name"} laboratoire de l'informatique
+    - je veux avoir des informations sur le laboratoire [masafeq]{"entity": "lab_name"}
+    - est ce que [masafeq]{"entity": "lab_name"} est un laboratoire didié à la recherche en statistiques
+    - quels sont les types de recherches à [masafeq]{"entity": "lab_name"}
+    - je veux contacter le reponsable de [masafeq]{"entity": "lab_name"}
+    - le responsable de [masafeq]{"entity": "lab_name"}
+    - quel est l'email du reponsable du laboratoire [masafeq]{"entity": "lab_name"}
+    - C'est quoi [ges3d]{"entity": "lab_name"}  
+    - je veux avoir des informations sur le laboratoire [ges3d]{"entity": "lab_name"}
+    - quels sont les types de recherches à [ges3d]{"entity": "lab_name"}
+    - je veux contacter le reponsable de [ges3d]{"entity": "lab_name"}
+    - le responsable de [ges3d]{"entity": "lab_name"}
+    - quel est l'email du reponsable du laboratoire [ges3d]{"entity": "lab_name"}
+    - je veux savoir les professeurs du [economie et Finance]{"entity": "dprt_name"}
+    - quels sont les professeurs du [Economie et Finance]{"entity": "dprt_name"} à l'insea
+    - les profs de [Economie et Finance]{"entity": "dprt_name"}
+    - [Economie et Finance]{"entity": "dprt_name"}
+    - structure professoralle du [informatique]{"entity": "dprt_name"}
+    - je veux savoir les professeurs du [informatique]{"entity": "dprt_name"}
+    - quels sont les professeurs du [informatique]{"entity": "dprt_name"} à l'insea
+    - les profs de [informatique]{"entity": "dprt_name"}
+    - [informatique]{"entity": "dprt_name"}
+    - structure professoralle du [mathématique et recherche opérationnelle]{"entity": "dprt_name"}
+    - je veux savoir les professeurs du [mathématique et recherche opérationnelle]{"entity": "dprt_name"}
+    - quels sont les professeurs du [mathématique et recherche opérationnelle]{"entity": "dprt_name"} à l'insea
+    - les profs de [mathématique et recherche opérationnelle]{"entity": "dprt_name"}
+    - [mathématique et recherche opérationnelle]{"entity": "dprt_name"}
+    - structure professoralle du [mathématique et recherche opérationnelle]{"entity": "dprt_name"}
+    - je veux savoir les professeurs du [statistique, démographie et actuariat]{"entity": "dprt_name"}
+    - quels sont les professeurs du [statistique, démographie et actuariat]{"entity": "dprt_name"} à l'insea
+    - les profs de [statistique, démographie et actuariat]{"entity": "dprt_name"}
+    - [statistique, démographie et actuariat]{"entity": "dprt_name"}
+    - structure professoralle du [statistique, démographie et actuariat]{"entity": "dprt_name"}
+    - je veux savoir les professeurs du [sciences sociales et techniques d'expression et de communication]{"entity": "dprt_name"}
+    - quels sont les professeurs du [sciences sociales et techniques d'expression et de communication]{"entity": "dprt_name"} à l'insea
+    - les profs de [sciences sociales et techniques d'expression et de communication]{"entity": "dprt_name"}
+    - [sciences sociales et techniques d'expression et de communication]{"entity": "dprt_name"}
+    - structure professoralle du [sciences sociales et techniques d'expression et de communication]{"entity": "dprt_name"}
+    - Je veux savoir des informations sur la filière [data science]{"entity": "field_name"} en cycle d'ingénieur
+    - c'est quoi [data science]{"entity": "field_name"} en cycle d'ingénieur
+    - je veux faire [data science]{"entity": "field_name"} 
+    - c'est le profil de [data science]{"entity": "field_name"} 
+    - quels sont les avantages de la filière de [data science]{"entity": "field_name"}
+    - je veux avoir le descriptif de [data science]{"entity": "field_name"}
+    - domaines d'application de [data science]{"entity": "field_name"}
+    - Je veux savoir des informations sur la filière [statistique démographie]{"entity": "field_name"} en cycle d'ingénieur
+    - c'est quoi [statistique démographie]{"entity": "field_name"} en cycle d'ingénieur
+    - je veux faire [statistique démographie]{"entity": "field_name"} 
+    - c'est le profil de [statistique démographie]{"entity": "field_name"} 
+    - quels sont les avantages de la filière de [statistique démographie]{"entity": "field_name"}
+    - je veux avoir le descriptif de [statistique démographie]{"entity": "field_name"}
+    - domaines d'application de [statistique démographie]{"entity": "field_name"}
+    - Je veux savoir des informations sur la filière [recherche opérationnelle]{"entity": "field_name"} en cycle d'ingénieur
+    - c'est quoi [recherche opérationnelle]{"entity": "field_name"} en cycle d'ingénieur
+    - je veux faire [recherche opérationnelle]{"entity": "field_name"} 
+    - c'est le profil de [recherche opérationnelle]{"entity": "field_name"} 
+    - quels sont les avantages de la filière de [recherche opérationnelle]{"entity": "field_name"}
+    - je veux avoir le descriptif de [recherche opérationnelle]{"entity": "field_name"}
+    - domaines d'application de [recherche opérationnelle]{"entity": "field_name"}
+    - Je veux savoir des informations sur la filière [actuariat finance]{"entity": "field_name"} en cycle d'ingénieur
+    - c'est quoi [actuariat finance]{"entity": "field_name"} en cycle d'ingénieur
+    - je veux faire [actuariat finance]{"entity": "field_name"} 
+    - c'est le profil de [actuariat finance]{"entity": "field_name"} 
+    - quels sont les avantages de la filière de [actuariat finance]{"entity": "field_name"}
+    - je veux avoir le descriptif de [actuariat finance]{"entity": "field_name"}
+    - domaines d'application de [actuariat finance]{"entity": "field_name"}
+    - Je veux savoir des informations sur la filière [data engineer]{"entity": "field_name"} en cycle d'ingénieur
+    - c'est quoi [data engineer]{"entity": "field_name"} en cycle d'ingénieur
+    - je veux faire [data engineer]{"entity": "field_name"} 
+    - c'est le profil de [data engineer]{"entity": "field_name"} 
+    - quels sont les avantages de la filière de [data engineer]{"entity": "field_name"}
+    - je veux avoir le descriptif de [data engineer]{"entity": "field_name"}
+    - domaines d'application de [data engineer]{"entity": "field_name"}
+    - Je veux savoir des informations sur la filière [statistique economie]{"entity": "field_name"} en cycle d'ingénieur
+    - c'est quoi [statistique economie]{"entity": "field_name"} en cycle d'ingénieur
+    - je veux faire [statistique economie]{"entity": "field_name"} 
+    - c'est le profil de [statistique economie]{"entity": "field_name"} 
+    - quels sont les avantages de la filière de [statistique economie]{"entity": "field_name"}
+    - je veux avoir le descriptif de [statistique economie]{"entity": "field_name"}
+    - domaines d'application de [statistique economie]{"entity": "field_name"}
+    - domaines d'application de [stat eco]{"entity": "field_name", "value" :"statistique economie"}
+    - je veux avoir le descriptif de [stat eco]{"entity": "field_name", "value" :"statistique economie"}
+    - c'est le profil de [stat eco]{"entity": "field_name", "value" :"statistique economie"}
+    - Je veux savoir des informations sur la filière [dse]{"entity": "field_name", "value": "data engineer"} en cycle d'ingénieur
+    - c'est quoi [dse]{"entity": "field_name", "value": "data engineer"} en cycle d'ingénieur
+    - je veux faire [dse]{"entity": "field_name", "value": "data engineer"} 
+    - c'est le profil de [dse]{"entity": "field_name", "value": "data engineer"} 
+    - quels sont les avantages de la filière de [dse]{"entity": "field_name", "value": "data engineer"}
+    - je veux avoir le descriptif de [dse]{"entity": "field_name", "value": "data engineer"}
+    - Je veux savoir des informations sur la filière [actuariat]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - c'est quoi [actuariat]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - je veux faire [actuariat]{"entity": "field_name", "value": "actuariat finance"} 
+    - c'est le profil de [actuariat]{"entity": "field_name", "value": "actuariat finance"} 
+    - quels sont les avantages de la filière de [actuariat]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [actuariat]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [actuariat]{"entity": "field_name", "value": "actuariat finance"}
+    - Je veux savoir des informations sur la filière [actuariat]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - c'est quoi [actuariat]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - je veux faire [actuariat]{"entity": "field_name", "value": "actuariat finance"} 
+    - c'est le profil de [actuariat]{"entity": "field_name", "value": "actuariat finance"} 
+    - quels sont les avantages de la filière de [actuariat]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [actuariat]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [actuariat]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [finance]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [finance]{"entity": "field_name", "value": "actuariat finance"}
+    - Je veux savoir des informations sur la filière [finance]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - c'est quoi [finance]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - je veux faire [finance]{"entity": "field_name", "value": "actuariat finance"} 
+    - c'est le profil de [finance]{"entity": "field_name", "value": "actuariat finance"} 
+    - quels sont les avantages de la filière de [finance]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [finance]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - Je veux savoir des informations sur la filière [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - c'est quoi [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"} en cycle d'ingénieur
+    - je veux faire [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"} 
+    - c'est le profil de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"} 
+    - quels sont les avantages de la filière de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - domaines d'application de [actuariat et finance]{"entity": "field_name", "value": "actuariat finance"}
+    - je veux avoir le descriptif de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - domaines d'application de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - Je veux savoir des informations sur la filière [ro]{"entity": "field_name", "value": "recherche opérationnelle"} en cycle d'ingénieur
+    - c'est quoi [ro]{"entity": "field_name", "value": "recherche opérationnelle"} en cycle d'ingénieur
+    - je veux faire [ro]{"entity": "field_name", "value": "recherche opérationnelle"} 
+    - c'est le profil de [ro]{"entity": "field_name", "value": "recherche opérationnelle"} 
+    - quels sont les avantages de la filière de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - je veux avoir le descriptif de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - domaines d'application de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - je veux avoir le descriptif de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - domaines d'application de [ro]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - Je veux savoir des informations sur la filière [road]{"entity": "field_name", "value": "recherche opérationnelle"} en cycle d'ingénieur
+    - c'est quoi [road]{"entity": "field_name", "value": "recherche opérationnelle"} en cycle d'ingénieur
+    - je veux faire [road]{"entity": "field_name", "value": "recherche opérationnelle"} 
+    - c'est le profil de [road]{"entity": "field_name", "value": "recherche opérationnelle"} 
+    - quels sont les avantages de la filière de [road]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - je veux avoir le descriptif de [road]{"entity": "field_name", "value": "recherche opérationnelle"}
+    - Je veux savoir des informations sur la filière [stat démo]{"entity": "field_name", "value": "statistique démographie"} en cycle d'ingénieur
+    - c'est quoi [stat démo]{"entity": "field_name", "value": "statistique démographie"} en cycle d'ingénieur
+    - je veux faire [stat démo]{"entity": "field_name", "value": "statistique démographie"} 
+    - c'est le profil de [stat démo]{"entity": "field_name", "value": "statistique démographie"} 
+    - quels sont les avantages de la filière de [stat démo]{"entity": "field_name", "value": "statistique démographie"}
+    - je veux avoir le descriptif de [stat démo]{"entity": "field_name", "value": "statistique démographie"}
+    - Je veux savoir des informations sur la filière [ds]{"entity": "field_name", "value": "data science"} en cycle d'ingénieur
+    - c'est quoi [ds]{"entity": "field_name", "value": "data science"} en cycle d'ingénieur
+    - je veux faire [ds]{"entity": "field_name", "value": "data science"} 
+    - c'est le profil de [ds]{"entity": "field_name", "value": "data science"} 
+    - quels sont les avantages de la filière de [ds]{"entity": "field_name", "value": "data science"}
+    - je veux avoir le descriptif de [ds]{"entity": "field_name", "value": "data science"}
+    - domaines d'application de [ds]{"entity": "field_name", "value": "data science"}
+    - Je veux savoir des informations sur la filière [data]{"entity": "field_name", "value": "data science"} en cycle d'ingénieur
+    - c'est quoi [data]{"entity": "field_name", "value": "data science"} en cycle d'ingénieur
+    - je veux faire [data]{"entity": "field_name", "value": "data science"} 
+    - c'est le profil de [data]{"entity": "field_name", "value": "data science"} 
+    - quels sont les avantages de la filière de [data]{"entity": "field_name", "value": "data science"}
+    - je veux avoir le descriptif de [data]{"entity": "field_name", "value": "data science"}
+    - domaines d'application de [data]{"entity": "field_name", "value": "data science"}
+
+- intent: ask_admission
+  examples: |
+    - quel classment en classes prépas que je dois avoir pour intégrer l'insea ?
+    - j'ai un classement de 654 en mp classes prépas quel filière que je peux intégrer à l'insea ?
+    - est ce que avec un classement de 654 en classes prepas je peux intégrer l'insea ?
+    - est ce que avec une licence je peux intégrer le cycle d'ingénieur à l'insea ?
+    - j'ai une licence en mathématiques et veux intégrer le cycle d'ingénieur 
+    - j'ai une licence en mathématiques et je veux savoir si je faire un master à l'insea ?
+    - j'ai un classement de 654 et je veux intégrer le cycle d'ingénieur en data science
+    - j'ai un classement de 654 et je veux intégrer le cycle d'ingénieur en actuariat 
+    - j'ai un classement de 654 et je veux intégrer le cycle d'ingénieur en recherche opérationnelle 
+    - quel est le classement maximum pour intégrer le cycle d'ingénieur
+    - est ce que avec un diplome d'université je peux intégrer l'insea
+    - j'ai une licence et je veux faire un master à l'insea
+    - quel sont les conditions d'admission en cycle d'ingénieur
+    - comment intégrer l'insea en cycle d'ingénieur 
+    - je veux inégrer l'insea en cycle d'ingénieur
+    - quels sont les conditions d'intégrer l'insea en cycle d'ingénieur 
+    - je veux avoir des informations sur comment intégrer l'insea en cycle d'ingénieur 
+    - comment intégrer le cycle d'ingénieur à l'insea
+    - comment intégrer master en cycle d'ingénieur
+    - je veux candidater le cycle d'ingénieur 
+    - je veux candidater master
+    - comment candidater le cycle d'ingénieur 
+    - comment intégrer le cycle d'ingénieur 
+    - candidater master
+    - candidater cycle c'ingénieur
+
+- intent: ask_lab
+  examples: |
+    - Quels sont les laboratoires disponibles à l'INSEA ?
+    - Combien de laboratoires sont disponibles à l'INSEA ?
+    - Puis-je en savoir plus sur les laboratoires de l'INSEA ?
+    - Puis-je obtenir des informations sur les laboratoires de l'INSEA ? 
+    - je veux savoir les labos disponibles à l'insea ?
+    - quels sont les labs le l'insea ?
+    - est ce que l'insea dispose des laboratoires de recherches ?
+    - labs 
+    - laboratoires de recherches 
+    - laboratoire
+    - recherches scientifiques à l'insea 
+    - laboratoire de recherche en inforamatique 
+    - laboratoire de recherche en statistiques 
+    - je veux savoir les laboratoires de l'institut
+
+- intent: ask_news
+  examples: |
+    - quels les nouveautés à l'insea?
+    - quoi de neuf à l'insea ?
+    - est ce qu'il y a des nouvelles ?
+    - quels sont les nouvelles annonces à l'insea ?
+    - est ce qu'il y a des annonces recentes ?
+    - quoi de neuf ? 
+    - est ce qu'il ya des nouvelles sur l'etablissement 
+    - est ce qu'il des nouvelles sur les listes des candidats admissibles 
+
+- intent: ask_events
+  examples: |
+    - quels sont les prochain evénements à l'insea?
+    - est ce qu'il y a des evenement à l'insea ?
+    - je veux savoir les evenement à venir ?
+    - est ce qu'il y a des conférences à venir ?
+    - conférences à l'insea
+    - fetes à l'insea
+    - est ce qu'il y a des activité dans cette semaine à l'insea
+    - quels sont les nouvelles activités au sein de l'insea
+    - je veux savoir les nouvelles fetes 
+    - je veux avoir des information sur la conférence 
+
+- intent: ask_phd
+  examples: |
+    -quels programmes doctorals disponibles à l'insea ?
+    -doctorat à l'insea ?
+    -je veux savoir les doctorats disponibles à l'insea ?
+    -je veux postuler pour une doctorat à l'insea ?
+    -quels sont les regelement doctorat à  l'insea ?
+    -je veux voir la charte doctorat à l'insea ?
+    -est ce qu'il y a des programmes phd 
+    -phd en informatique
+    -phd en statistique
+    -phd en economie
+    -doctorat en informatique
+    -doctorat en economie 
+    -doctorat en statistique
+    -est ce qu'il y a des offres doctorat
+    -est ce qu'il y a des offres phd 
+
+- intent: ask_master
+  examples: |
+    -quels programmes master disponibles à l'insea ?
+    -doctorat à l'insea ?
+    -je veux savoir les master disponibles à l'insea ?
+    -je veux postuler pour une master à l'insea ?
+    -quels sont les regelement master à  l'insea ?
+    -je veux voir la charte master à l'insea ?
+    -est ce qu'il y a des master ouverts à l'insea en statistiques
+    -y a t-il les offres master en informatique 
+    -y a t-il les offres master en statistiques 
+    -master en informatique
+    -master en statistique
+    -master en economie
+
+- intent: ask_mood
+  examples: |
+    -Comment ça va ?
+    -cv ?
+    -ça va ?
+    -comment aller vous ? 
+    -tu vas bien?
+    -et toi ?
+    -et toi cv ?
+    -et comment tu vas?
+    -tu sens bien? 
+    -oui ça va et vous? 
+    -je vais très bien et vous ?
+    -parfait et vois ?
+    -labass et vous ? 
+    -oui cvcv et vous ? 
+    -oui cvcv et toi?
+    -labass et toi ?
+    -je me sens bien et toi ? 
+    -tranquille et toi comment tu vas ? 
+    -tranquille et toi ? 
+
+- intent: thanks
+  examples: |
+    -merci 
+    -thanks
+    -merci infiniment 
+    -choukran 
+    -gracias
+    -merci bien 
+    -bon travail
+    -je vous remercie 
+    -remerciement
+    -thank you
+
+- intent: ask_prof
+  examples: |
+    -Quels sont les professeurs de l'INSEA ?
+    -Combien de professeurs sont disponibles à l'INSEA ?
+    -Puis-je en savoir plus sur les professeurs de l'INSEA ?
+    -Puis-je avoir des informations sur les professeurs de l'INSEA ? 
+    -Quel est la structure professoralle de l'insea ?
+    -Quel le nombre de profs à l'insea ?
+    -Je veux contacter un prof ?
+    -Je veux avoir le numéro de telephone du prof 
+    -Quel est l'email du professeur 
+    -Quel est l'email du prof
+    -Je veux téléphoner le professeur 
+
+- intent: mood_angry
+  examples: |
+    -Conard 
+    -Putain
+    -tu comprends pas toi 
+    -tete de mule
+    -merde
+    -t'es un con 
+    -con 
+    -stupide
+    -t'es pas intelligent
+    -fuck you 
+    -fuck 
+    -wtf
+    -hmar
+
+- intent: ask_eng
+  examples: |
+    - Combien y a-t-il de domaines d'ingénierie ?
+    - puis-je connaître l'ingénierie ?
+    - Quels sont les domaines d'ingénierie disponibles à l'Insea ?
+    - puis-je obtenir des informations sur l'ingénierie insea ?
+    - Pouvez-vous décrire l'ingénierie informatique ?
+    - ingénierie en insea ? 
+    - je veux savoir des inforamtion sur le cycle d'ingénieurs à l'insea
+    - comment je peux intégrer le cycle d'ingénieur à l'insea 
+    - est ce qu'il y a de l'informatique dans le cycle d'ingénieur 
+    - de l'informatique dans le cycle d'ingénieur 
+    - des statistiques en cycle d'ingénieur
+    - je veux devenir un ingénieur 
+    - les formations offertes à l'insea en cycle d'ingénieur 
+    - formation à l'insea
+    - je veux savoir les filières diponibles en cyle d'ingénieur
+    - quels sont les filières en cycle d'ingénieur
+    - je peux savoir les filières disponible en cycle d'ingénieur
+    - quels sont les filières disponibles à l'insea ?
+    - quels sont les filières en cycles d'ingénieur
+    - quels sont les filières disponible à l'institut
+    - quels filière pensez vous faire ? 
+    - quel filière en cycle d'ingénieur que je dois faire 
+
+- intent: why_insea
+  examples: |
+    - pourquoi insea ?
+    - est l'institut insea numéro 1 ?
+    - pourquoi devrais-je choisir l'institut insea ?
+    - pourquoi insea est bon pour moi ?
+    - pourquoi devrais-je postuler à l'institut insea ?
+    - pourquoi l'institut insea ? 
+    - pourquoi choisir l'insea ?
+    - est ce que l'insea est le meilleur choix ?
+    - étudier à l'insea est il un bon choix ?
+    - pourquoi l'insea est le meilleur choix pour faire data science ?
+    - pourquoi l'insea est le meilleur choix pour faire les statisques ?
+    - faire les études à l'insea ? 
+
+
+- intent: ask_weather
+  examples: |
+    - quel temps fait-il en insea ?
+    - quel temps fait-il à rabat ?
+    - Dis moi la météo à rabat
+    - la météo à rabat
+    - y a-t-il du vent à rabat aujourd'hui
+    - il pleut à Rabat
+    - est-ce que le temps est nuageux à Rabat demain
+    - aujourd'hui pluie à rabat
+    - va-t-il faire température à rabat aujourd'hui
+    - va-t-il pleuvoir demain à rabat
+    - dois-je porter une veste demain
+    - que penses-tu que je puisse porter demain pour l'école
+    - Quelle est la qualité de l'air demain à rabat
+    - Je veux connaître la météo en insea
+    - quel temps fait-il en insea 
+
+- intent: job_rate 
+  examples: |
+    - taux d'emploi à insea
+    - quel est le taux d'emploi insea
+    - taux d'emploi
+    - taux de travail insea
+    - taux d'emploi à l'institut insea
+
+- intent: fees
+  examples: |
+    - quels sont les frais d'inscription à l'insea ?
+    - Quelle est la structure de frais ?
+    - quels sont les frais de scolarité ?
+    - J'ai besoin d'informations sur les frais de scolarité à l'insea 
+    - combien de frais que je dois payer dans insea ?
+    - Quel montant est indispensable pour le paiement des frais d'inscription ?
+    - Quel est le montant payé pour les frais de l'insea ?
+    - J'ai besoin d'informations sur le montant à payer pour s'inscrire à l'institut 
+    - A combien s'élèveront mes frais semestriels si j'arrive à figurer sur la liste de mérite ?
+    - Après avoir figuré sur la liste de mérite, quels seront mes frais de semestre ?
+    - Quelle est la structure tarifaire de l'insea?
+    - A combien s'élèvent les frais de l'insea ?
+    - Quel est le montant des frais d'inscription pour étudier le cycle d'ingénieur ?
+    - Combien de frais devra-t-on payer pour étudier le master ?
+    - Quelles sont les informations concernant les frais de master ?
+    - Quelle est la structure tarifaire complète de cycle d'ingénieur ?
+    - J'ai besoin d'informations sur la structure tarifaire complète de master.
+    - J'ai besoin de connaître la structure tarifaire totale de cycle d'ingénieur.
+    - Quels sont les détails concernant la structure tarifaire du master ?
+    - Existe-t-il des informations sur la structure tarifaire cycle d'ingénieurs ? 
+
+- intent: academic_year
+  examples: |
+    -Quand commence et se termine l'année académique de l'institut ?
+    -Quel calendrier de l'année académique l'institut suit-elle ?
+    -Quand commence l'année académique de l'institut?
+    -Quand se termine l'année institut ? 
+    -puis je avoir des informations sur l'année universitaire à l'insea ?
+    -je veux savoir quand commence l'année univeristaire
+    -je veux avoir des informations sur l'année univeristaire à l'insea 
+
+
+- intent: bot_challenge
+  examples: |
+    - Etes-vous un robot?
+    - Êtes-vous un être humain?
+    - est-ce que je parle à un bot ?
+    - est-ce que je parle à un humain ? 
+
+- intent: contacts
+  examples: | 
+    - comment contacter l'institut ?
+    - ses coordonnées ?
+    - comment se connecter avec l'institut ?
+    - comment joindre l'institut ?
+    - le numéro de contact de l'institut ?
+    - le contact de l'institut ?
+    - contacter l'institut 
+    - numéro de téléphone de l'institut ?
+    - adresse email du service de contact 
+    - contacter insea 
+    - appeler insea 
+    - rester en conctact avec l'insea
+    - le fix de l'insea
+    - les coordonnées de l'insea
+    - comment contacter l'insea ?
+    - je veux contacter l'insea 
+    - je veux parler avec le service des étudiants 
+    - je veux poser une question en téléphone 
+    - je veux téléphoner le service des étudiants 
+
+
+- intent: institut_adrs
+  examples: | 
+    - Ou se trouve l'institut
+    - C'est quoi l'adresse de l'institut
+    - je veux aller visiter l'institut 
+    - Je veux rendre visite l'institut
+    - Ou se trouve l'insea
+    - est ce que insea est à rabat ?
+    - Comment je peux aller visiter l'insea ?
+    - Comment je peux déplacer à l'insea ?
+    - transport à prendre pour aller visister l'insea ?
+    - dépacer vers l'insea
+
+- intent: mosque
+  examples: | 
+    - est ce qu'il y a une mosqué à l'insea ?
+    - ou je peux faire la prière ?
+    - est ce qu'il autorisé de faire la prière à l'insea ?
+    - est ce qu'il y a une mosqué dans la campus de l'institut ?
+    - est que insea dispose d'une mosqué ?
+    - mosqué à l'insea 
+    - faire la prière à l'institut ?
+    - je suis un musulman 
+    - je veux rester en contact avec mon dieu à l'insea 
+    - je veux faire la prière 
+
+- intent: restaurent
+  examples: | 
+    - est ce qu'il ya de la restauration à l'insea ?
+    - j'ai faim 
+    - ou je peux manger à l'insea ?
+    - est ce qu'il y a de service de restauration à l'institut ?
+    - je veux manger à l'insea 
+    - est ce que la restauration est disponible à l'insea ?
+    - ou ce trouve le refectoire ?
+    - ou se trouve le restaurent ?
+    - combien coute un repas ?
+    - combien de repas sont disponibles au restaurent de l'insea ?
+    - quel le tarif des repas au restaurent ?
+    - combien coute le déjeuner ?
+    - est ce je dois payer pour manger ?
+    - restaurent
+
+- intent: cafeteria
+  examples: | 
+    - je veux prendre un café
+    - est ce qu'il existe un cafétéria à l'insea
+    - je veux acheter des snacks à l'insea
+    - ou je peux avoir un café
+    - ou je peux boire quelque chose
+    - cafétéria
+    - café
+    - cafèt
+    - je veux acheter un repas 
+    - je veux acheter un café 
+    - je veux acheter un gateau     
+
+- intent: housing
+  examples: | 
+    - est ce qu'il y a un dortoire à l'insea ?
+    - ou je peux dormir à l'insea ?
+    - dortoire
+    - je veux savoir si l'insea dispose d'un dortoire
+    - est ce que insea dispose d'un dortoire ?
+    - quels sont les conditions d'avoir une chambre au dortoire de l'insea ?
+    - je veux avoir une chambre au dortoire de l'insea
+    - je veux avoir une chambre à l'internat de l'insea
+    - je veux accéder à l'internat de l'insea
+    - l'internat 
+    - est ce l'internet est disponible à l'insea ?
+    - est ce qu'il y a un hebergement à l'insea ?
+    - l'hebergement est il disponible à l'institut
+    - des infromations sur l'hebergement
+    - je suis loin de rabat 
+    - je suis loin de l'institut 
+    - j'habite loin 
+    - j'habite très loin de rabat 
+    - j'habite loin de rabat et je veux savoir si j'ai le droit d'avoir une chambre
+
+- intent: library
+  examples: | 
+    - est ce que la bibliothéque est disponible à l'insea
+    - bibliothéque
+    - ou se trouve la bibliothéque
+    - est ce qu'il y a une bibliothèque à l'insea
+    - ou je peux faire mes devoirs
+    - ou je peux travailler 
+    - je veux avoir des informations sur la bibliothéque à l'insea
+    - documentation à l'insea
+    - je veux recupérer des livres 
+    - je veux faire une recherche sur internet 
+    - est ce qu'il y a des ordinateurs à l'insea
+
+
+- intent: deen
+  examples: |
+    - qui est le président de l'institut 
+    - qui est le president de l'insea
+    - qui est ton président
+    - président de l'insea
+    - directeur de l'insea
+    - qui est le directeur de l'insea
+    - ce qui le directeur de l'institut
+    - je veux contacter le président de l'institut
+    - je veux appler le directeur de l'insea
+    - comment je peux contacter le président de l'insea
+    - je veux téléphoner le directeur 
+    - je veux téléphoner le président de l'institut
